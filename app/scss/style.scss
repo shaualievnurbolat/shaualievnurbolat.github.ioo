@@ -161,7 +161,7 @@
         &-icon {
             position: absolute;
             left: 0;
-            top: 50px;
+            bottom: -50px;
             width: 500px;
             z-index: 1;
         }
@@ -202,7 +202,27 @@
 // skills
 .skills {
     height: 100vh;
-    background-color: #fff;
+    background-color: #000;
+    color: #fff;
+
+    padding: 50px 0;
+
+    position: relative;
+    hr {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 10px;
+        background-color: #DFBE18;
+        border: none;
+    }
+    h2 {
+        font-size: 54px;
+        text-align: left;
+        z-index: 100;
+    }
 }
 
 
