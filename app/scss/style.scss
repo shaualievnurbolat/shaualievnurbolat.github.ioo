@@ -2,6 +2,8 @@
 
 @import 'main';
 
+html { overflow-x: hidden; }
+
 // menu
 .header {
     position: fixed;
@@ -114,6 +116,23 @@
 
             position: absolute;
             bottom: 200px;
+            transition: all .5s;
+        }
+        a::before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 0;
+            height: 50px;
+            background-color: #fff;
+            z-index: -1;
+            transition: all 0.5s;
+        }
+        a:hover {
+            color: #000;
+        }
+        a:hover::before {
+            width: 200px;
         }
         h2 {
             font-size: 48px;
@@ -128,4 +147,96 @@
 .hobby {
     height: 100vh;
     background-color: #fff;
+}
+
+
+
+// hamburger
+
+.hamburger {
+    span {
+        display: block;
+        width: 30px;
+        height: 2px;
+        background-color: #fff;
+        margin-top: 5px
+    }
+    span:nth-child(1) {
+        margin-top: 0;
+    }
+}
+
+
+
+// адаптация
+
+@media all and (max-width: 1500px) {
+    .container {
+        max-width: 1350px;
+    }
+}
+
+@media all and (max-width: 1400px) {
+    .container {
+        max-width: 1140px;
+    }
+    .aboutme {
+        &__inner {
+            width: 60%;
+        }
+    }
+}
+
+@media all and (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media all and (max-width: 992px) {
+    .container {
+        max-width: 720px;
+    }
+    .aboutme {
+        &__inner {
+            width: 100%;
+        }
+        &__wrapper {
+            &-bg {
+                position: absolute;
+                z-index: -1;
+                top: 0;
+                right: -400px;
+                width: 900px;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 768px) {
+    .container {
+        max-width: 540px;
+    }
+    .header {
+        &__nav {
+            &-menu {
+                display: none;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 576px) {
+    .container {
+        padding: 0 20px;
+    }
+    .hamburger {
+        display: block;
+    }
+    
+    .footer {
+        &__menu {
+            display: none;
+        }
+    }
 }
