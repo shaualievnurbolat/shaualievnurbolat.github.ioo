@@ -31,6 +31,9 @@
   },
   "dependencies": {
     "animate.css": "^4.1.1",
-    "fullview": "^1.1.2"
+    "fullview": "^1.1.2",
+    "jquery": "^3.6.1",
+    "wow.js": "^1.2.2",
+    "wowjs": "^1.1.3"
   }
 }

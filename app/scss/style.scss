@@ -5,7 +5,7 @@
 // menu
 .header {
     position: fixed;
-    z-index: 100;
+    z-index: 1000;
     top: 0;
     left: 0;
 
@@ -148,12 +148,11 @@
     background-color: #020202;
     color: #fff;
     overflow: hidden;
-    z-index: -2;
     position: relative;
     h2 {
         font-size: 54px;
         text-align: right;
-
+        z-index: 100;
     }
     &__wrapper {
         display: flex;
@@ -162,17 +161,19 @@
         &-icon {
             position: absolute;
             left: 0;
-            top: 0;
-            width: 600px;
-            z-index: -1;
+            top: 50px;
+            width: 500px;
+            z-index: 1;
         }
     }
     &__inner {
         display: grid;
         grid-template-columns: repeat(3, 200px);
         gap: 20px;
+        z-index: 100;
         
         margin-top: 10%;
+
         &-item {
             width: 200px;
             height: 200px;
@@ -194,6 +195,14 @@
             color: #000;
         }
     }
+}
+
+
+
+// skills
+.skills {
+    height: 100vh;
+    background-color: #fff;
 }
 
 
@@ -290,6 +299,13 @@
     .hamburger {
         display: block;
     }
+
+    .hobby {
+        padding: 10px 0;
+        &__inner {
+            grid-template-columns: repeat(1, 200px);
+        }
+    }
 }
 
 @media all and (max-width: 576px) {
@@ -319,10 +335,6 @@
     }
 
     .hobby {
-        padding: 10px 0;
-        &__inner {
-            grid-template-columns: repeat(1, 200px);
-        }
         &__wrapper {
             &-icon {
                 left: -150px;
