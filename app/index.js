@@ -4,7 +4,6 @@ import hobbyImages from './img/png.png'
 import skillsIcon from './img/500.gif'
 import WOW from '../node_modules/wow.js'
 import '../node_modules/animate.css'
-// import "wowjs/dist/wow.min.js";
 
 
 new WOW({
