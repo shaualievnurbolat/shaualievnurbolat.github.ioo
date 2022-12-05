@@ -336,10 +336,10 @@
 }
 
 .menu-mobile {
-    transition: 0.5s all;
+    transition: 0.3s all;
     position: fixed;
     top: 0;
-    left: -600px;
+    left: -100%;
     z-index: 1002;
 
     width: 60%;
