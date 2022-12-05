@@ -12,12 +12,18 @@ module.exports = {
         path: path.resolve(__dirname, './dist')
     },
     devServer: {
-        watchFiles: ['app/*.html'],
+        watchFiles: ['app/index.html'],
         open: true,
     },
     plugins: [
         new HTMLWebpackPlugin({
-            template: './app/index.html'
+            template: './app/index.html',
+            chunks: ['main'],
+        }),
+        new HTMLWebpackPlugin({
+            template: './app/form.html',
+            filename: 'form.html',
+            chunks: ['service']
         }),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
