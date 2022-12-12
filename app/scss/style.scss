@@ -1,6 +1,11 @@
-
-
 @import 'main';
+
+$mainTextColor: #fff;
+
+@mixin displayFlex () {
+    display: flex;
+    justify-content: space-between;
+}
 
 // menu
 .header {
@@ -12,11 +17,10 @@
     width: 100%;
     padding: 10px 0;
 
-    color: #fff;
+    color: $mainTextColor;
     background-color: #000;
     &__nav {
-        display: flex;
-        justify-content: space-between;
+        @include displayFlex();
         align-items: center;
         &-menu {
             display: flex;
@@ -39,7 +43,7 @@
         }
     }
     a {
-        color: #fff;
+        color: $mainTextColor;
     }
 }
 
@@ -54,7 +58,7 @@
 
     width: 100%;
     padding: 10px 0;
-    color: #fff;
+    color: $mainTextColor;
     background-color: #000;
     &__wrapper {
         display: flex;
@@ -67,7 +71,7 @@
         }
     }
     a {
-        color: #fff;
+        color: $mainTextColor;
     }
 }
 
@@ -76,15 +80,14 @@
 // aboutme 
 .aboutme {
     height: 100vh;
-    color: #fff;
+    color: $mainTextColor;
     padding: 70px 0 50px 0;
 
     position: relative;
     overflow: hidden;
 
     &__wrapper {
-        display: flex;
-        justify-content: space-between;
+        @include displayFlex();
         &-bg {
             position: absolute;
             z-index: -1;
@@ -146,7 +149,7 @@
     height: 100vh;
     padding: 100px 0;
     background-color: #020202;
-    color: #fff;
+    color: $mainTextColor;
     overflow: hidden;
     position: relative;
     h2 {
@@ -155,8 +158,7 @@
         z-index: 100;
     }
     &__wrapper {
-        display: flex;
-        justify-content: space-between;
+        @include displayFlex();
         flex-direction: row-reverse;
         &-icon {
             position: absolute;
@@ -202,7 +204,7 @@
 // skills
 .skills {
     background-color: #000;
-    color: #fff;
+    color: $mainTextColor;
 
     padding: 50px 0;
 
@@ -345,9 +347,9 @@
     width: 60%;
     height: 100vh;
     background-color: #000;
-    color: #fff;
+    color: $mainTextColor;
     a {
-        color: #fff;
+        color: $mainTextColor;
     }
 
     padding: 50px;

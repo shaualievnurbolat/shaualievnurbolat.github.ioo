@@ -39,7 +39,6 @@ CLOSEBUTTON.addEventListener('click', () => {
 })
 
 
-
 // add image in html
 ABOUTMEWRAPPER.insertAdjacentHTML('beforeend', `<img class="aboutme__wrapper-bg animate__animated animate__fadeInRightBig animate__delay-1s" src=${images}>`)
 HOBBYWRAPPER.insertAdjacentHTML('beforeend', `<img class="hobby__wrapper-icon wow animate__animated animate__fadeInLeftBig" src=${hobbyImages}>`)
